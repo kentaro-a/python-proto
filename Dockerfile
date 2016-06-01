@@ -24,6 +24,7 @@ RUN pip3 install --upgrade pip
 # Install Python's utility modules
 RUN pip3 install pandas
 RUN pip3 install xlwt
+RUN pip3 install xlrd
 RUN pip3 install openpyxl
 RUN pip3 install httplib2
 RUN cd /usr/local/src/ && \
@@ -33,4 +34,6 @@ RUN cd /usr/local/src/ && \
     python3 ./setup.py install
 
 # Setting up sample-modules
-RUN git clone https://github.com/kentaro-a/python-proto.git /home/python/
+RUN mkdir /home/python && \
+    cd /home/python && \
+    git clone https://github.com/kentaro-a/python-proto.git
