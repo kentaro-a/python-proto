@@ -18,6 +18,7 @@ RUN cd /usr/local/src/ && \
     ./configure && \
      make && make install
 
+# upgrade pip for latest-version
 RUN pip3 install --upgrade pip
 
 # Install Python's utility modules
@@ -25,11 +26,11 @@ RUN pip3 install pandas
 RUN pip3 install xlwt
 RUN pip3 install openpyxl
 RUN pip3 install httplib2
-
 RUN cd /usr/local/src/ && \
     git clone https://github.com/mysql/mysql-connector-python.git && \
     cd mysql-connector-python && \
     python3 ./setup.py build && \
     python3 ./setup.py install
 
+# Setting up sample-modules
 RUN git clone https://github.com/kentaro-a/python-proto.git /home/python/
