@@ -1,0 +1,2 @@
+[2016-05-23 19:30:54,862][DEBUG][sample.py Line:21] ok
+[2016-05-23 19:31:58,709][DEBUG][sample.py Line:21] ok
