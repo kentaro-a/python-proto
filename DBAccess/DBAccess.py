@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 
-import mysql.connector as msc
+import MySQLdb as msc
 
 
 """
 Accesser Class of Mysql Database.
 	env:
 		- python(3.5.1)
-		- mysql.connector(2.1.3)
+		- mysqlclient
 """
 class DBAccess:
 	
